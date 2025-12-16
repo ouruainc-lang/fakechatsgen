@@ -210,6 +210,7 @@ app.post('/api/create-checkout-session', async (req, res) => {
             },
             success_url: `${process.env.CLIENT_URL || 'http://localhost:5173'}/?success=true`,
             cancel_url: `${process.env.CLIENT_URL || 'http://localhost:5173'}/pricing?canceled=true`,
+            allow_promotion_codes: true,
         };
 
         if (stripeCustomerId) {
