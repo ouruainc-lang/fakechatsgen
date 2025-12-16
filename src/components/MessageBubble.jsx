@@ -15,7 +15,7 @@ const MessageBubble = ({ message, theme = 'whatsapp', isDarkMode = false }) => {
                 const metaColor = isDarkMode ? 'text-[#8696a0]' : 'text-[#667781]';
 
                 return {
-                    container: `max-w-[85%] w-fit break-words flow-root rounded-lg px-2 py-1 relative text-[14.2px] leading-[19px] shadow-sm ${isSender
+                    container: `max-w-[85%] w-fit break-words flow-root rounded-lg px-2 py-1 relative text-[14.2px] leading-[19px] shadow-sm whitespace-pre-wrap ${isSender
                         ? `${isFirst ? 'rounded-tr-none mb-1' : 'mb-[2px] rounded-tr-lg'}`
                         : `${isFirst ? 'rounded-tl-none mb-1' : 'mb-[2px] rounded-tl-lg'}`
                         } ${bgRequest} ${isSender ? 'ml-auto' : 'mr-auto'}`,
@@ -24,7 +24,7 @@ const MessageBubble = ({ message, theme = 'whatsapp', isDarkMode = false }) => {
                 };
             case 'imessage':
                 return {
-                    container: `max-w-[75%] w-fit break-words px-[12px] py-[6px] mb-[2px] text-[17px] leading-[22px] tracking-tight ${isSender
+                    container: `max-w-[75%] w-fit break-words px-[12px] py-[6px] mb-[2px] text-[17px] leading-[22px] tracking-tight whitespace-pre-wrap ${isSender
                         ? 'bg-[#007aff] text-white ml-auto rounded-[20px] rounded-br-[4px]'
                         : (isDarkMode ? 'bg-[#262626] text-white' : 'bg-[#e9e9eb] text-black') + ' mr-auto rounded-[20px] rounded-bl-[4px]'
                         }`,
@@ -39,7 +39,7 @@ const MessageBubble = ({ message, theme = 'whatsapp', isDarkMode = false }) => {
                 const telegramMeta = isDarkMode ? 'text-[#6ea1cb]' : 'text-[#559c47]'; // Approximate distinctive meta color
 
                 return {
-                    container: `max-w-[75%] w-fit break-words flow-root rounded-lg px-2 py-1 mb-1 relative text-[14px] leading-[18px] shadow-sm ${telegramBg} ${isSender ? 'ml-auto rounded-br-none' : 'mr-auto rounded-bl-none'}`,
+                    container: `max-w-[75%] w-fit break-words flow-root rounded-lg px-2 py-1 mb-1 relative text-[14px] leading-[18px] shadow-sm whitespace-pre-wrap ${telegramBg} ${isSender ? 'ml-auto rounded-br-none' : 'mr-auto rounded-bl-none'}`,
                     text: telegramText,
                     meta: `text-[11px] ${telegramMeta} ml-2 align-bottom float-right mt-[4px] h-[15px]`,
                 };
