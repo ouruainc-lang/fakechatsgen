@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useUser, useAuth } from '@clerk/clerk-react';
+import { useUser, useAuth, useClerk } from '@clerk/clerk-react';
 import { ChevronLeft, Check, X } from 'lucide-react';
 import { useSubscription } from '../context/SubscriptionContext';
 
 const PricingPage = () => {
     const { isPro } = useSubscription();
     const { user } = useUser();
-    const { isSignedIn, openSignIn } = useAuth();
+    const { isSignedIn } = useAuth();
+    const { openSignIn } = useClerk();
     const [loading, setLoading] = React.useState(false);
 
     const handleUpgrade = async () => {
