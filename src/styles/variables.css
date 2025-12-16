@@ -1,0 +1,28 @@
+:root {
+  /* Global Defaults */
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --bg-color: #f0f2f5;
+  
+  /* WhatsApp Theme */
+  --wa-bg-color: #efe7dd; /* Light beige pattern bg (simplified) */
+  --wa-message-out-bg: #d9fdd3;
+  --wa-message-in-bg: #ffffff;
+  --wa-text-color: #111b21;
+  --wa-meta-color: #667781;
+  
+  /* iMessage Theme */
+  --im-bg-color: #ffffff;
+  --im-message-out-bg: #007aff;
+  --im-message-out-text: #ffffff;
+  --im-message-in-bg: #e9e9eb;
+  --im-message-in-text: #000000;
+  
+  /* Telegram Theme */
+  --tg-bg-color: #8da4c1; /* Default pattern bg color */
+  --tg-message-out-bg: #effdde;
+  --tg-message-in-bg: #ffffff;
+  
+  /* Layout Constants */
+  --preview-width: 375px; /* Mobile width */
+  --preview-min-height: 600px;
+}

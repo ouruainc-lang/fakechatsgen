@@ -1,0 +1,50 @@
+@import './styles/variables.css';
+
+@import 'tailwindcss';
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: #1a1a1a;
+  /* Dark editor background */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Fix for Clerk Modal Z-Index */
+.cl-modalBackdrop,
+.cl-modalContent,
+.cl-component {
+  z-index: 9999 !important;
+}
+
+/* Ensure portal root is high */
+#clerk-components {
+  z-index: 9999 !important;
+}
