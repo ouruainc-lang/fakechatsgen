@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useUser } from '@clerk/clerk-react';
+import { useUser, useAuth } from '@clerk/clerk-react';
 import { ChevronLeft, Check, X } from 'lucide-react';
 import { useSubscription } from '../context/SubscriptionContext';
 
